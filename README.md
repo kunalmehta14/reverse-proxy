@@ -11,11 +11,11 @@
 > To deploy the reverse proxy, use the docker-compose.yaml configuration.
 
 #### Features
-# -🎯 Dynamic Routing: 
+##### -🎯 Dynamic Routing: 
 > Traefik automatically detects containers' exposed ports and dynamically routes traffic, eliminating manual configuration.
-# -🔒 Automatic HTTPS: 
+##### -🔒 Automatic HTTPS: 
 > Secure your services with automatic Let's Encrypt SSL certificates. No more dealing with certificates manually!
-# -⚙️ Easy Configuration: 
+##### -⚙️ Easy Configuration: 
 > Configure your services' routing rules and other settings using simple labels in your services' Docker Compose files.
-# -🌐 Scalability: 
+##### -🌐 Scalability: 
 > Seamlessly scale your applications up or down while Traefik keeps routing traffic intelligently.
