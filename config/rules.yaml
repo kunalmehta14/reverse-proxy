@@ -1,0 +1,13 @@
+http:
+    routers:
+        <router-name>:
+            rule: "Host(`<fqdn-address>`)"
+            entrypoints:
+            - "websecure"
+            service: <service-name>
+            tls: {}
+    services:
+        <service-name>:
+            loadBalancer:
+                servers:
+                    - url: "https://<destination>"

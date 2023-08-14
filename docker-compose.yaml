@@ -1,0 +1,25 @@
+version: "3.3"
+
+services:
+  ################################################
+  ####        Traefik Proxy Setup           #####
+  ###############################################
+  traefik:
+    image: traefik:latest
+    restart: always
+    container_name: traefik-revproxy
+    ports:
+      - "80:80" 
+      - "8080:8080" 
+      - "443:443"
+    volumes:
+      - ./traefik/certs:/etc/traefik/certs 
+      - "/var/run/docker.sock:/var/run/docker.sock:ro" 
+      - ./traefik/config:/etc/traefik 
+      - ./traefik/logs:/var/log
+    networks:
+      - bridge-net
+networks:
+  bridge-net:
+    driver: bridge
+
